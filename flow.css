@@ -391,3 +391,136 @@ footer .foot a {
 footer .foot a:hover {
     color: #fbbf24; 
 }
+
+
+
+/* Adaptación mejorada para pantallas pequeñas (teléfonos) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;                /* Quita el padding lateral */
+        height: auto;
+        min-height: 80px;
+        position: relative;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.12); /* Más sutil en móvil */
+    }
+    header div,
+    .trianguloAh,
+    .trianguloBh {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+        min-height: 80px;
+        margin: 0;                 /* Asegura que no haya margen */
+        padding: 0;
+        left: 0;
+        top: 0;
+    }
+    header h1 {
+        font-size: 1.5em;              /* Más pequeño aún */
+        padding: 0 2px;
+        text-align: left;
+        margin: 0px;
+        flex: 1 1 0%;
+        min-width: 0;                /* Permite que el texto se ajuste */
+        flex-shrink: 1;              /* Permite que el texto se reduzca */
+        z-index: 2;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
+        word-break: break-word;
+        line-height: 1.1;
+    }
+    header img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin: 0 5px;
+        z-index: 2;
+        flex-shrink: 0;
+    }
+    header nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5px;
+        align-items: center;
+        justify-content: flex-end;
+        width: auto;
+        margin-top: 0;
+    }
+    #productos .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 productos por fila */
+        padding: 10px;
+        gap: 10px;
+        background-size: cover;
+    }
+    #productos .carta {
+        width: 100%; /* Aprovecha el ancho de la celda */
+        min-width: 0;
+    }
+    .sobre-nosotros {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-size: 120px;
+        padding: 20px 0 20px 0;
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .sobre-nosotros article {
+        margin: 10px 0 0 0;
+        font-size: 1em;
+        text-align: center;
+        width: 90%;
+        padding: 0;
+    }
+    .sobre-nosotros img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 10px auto;
+        display: block;
+        object-fit: cover;
+    }
+    .sobre-nosotros div {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+    #detalles {
+        flex-direction: column;
+        padding: 10px;
+        background-size: cover;      /* Cubre toda la sección */
+        background-position: center; /* Centra la imagen */
+    }
+    .det {
+        padding: 0;
+        font-size: 1em;
+    }
+    .deslizador {
+        width: 100vw;
+        height: 180px;
+        margin-left: 0;
+        border-radius: 10px;
+    }
+    .lista img {
+        width: 100vw;
+        height: 180px;
+    }
+    .botones button {
+        width: 32px;
+        height: 32px;
+        font-size: 1em;
+    }
+    .puntos li {
+        margin: 4px;
+    }
+    footer .foot {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+}
